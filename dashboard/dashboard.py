@@ -6,8 +6,8 @@ from pathlib import Path
 
 
 
-csv_file_path1 = Path(__file__).parents[0] / 'data/olist_customers_dataset.csv'
-csv_file_path2 = Path(__file__).parents[0] / 'data/olist_order_payments_dataset.csv'
+csv_file_path1 = Path(__file__).parents[0] / 'olist_customers_dataset.csv'
+csv_file_path2 = Path(__file__).parents[0] / 'olist_order_payments_dataset.csv'
 gambar = Path(__file__).parents[0] / 'foto.jpg'
 
 df_customer = pd.read_csv(csv_file_path1)
