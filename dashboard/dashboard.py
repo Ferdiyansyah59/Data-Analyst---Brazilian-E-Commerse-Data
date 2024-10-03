@@ -8,14 +8,14 @@ from pathlib import Path
 
 csv_file_path1 = Path(__file__).parents[0] / 'olist_customers_dataset.csv'
 csv_file_path2 = Path(__file__).parents[0] / 'olist_order_payments_dataset.csv'
-gambar = Path(__file__).parents[0] / 'foto.jpg'
+# gambar = Path(__file__).parents[0] / 'foto.jpg'
 
 df_customer = pd.read_csv(csv_file_path1)
 df_payment = pd.read_csv(csv_file_path2)
 
 with st.sidebar:
     st.subheader('Ferdiyansyah')
-    st.image(gambar)
+    # st.image(gambar)
     today = datetime.today().strftime('%d-%m-%Y')
     st.caption(f'Tanggal hari ini: {today}')
     menu = st.sidebar.selectbox(
