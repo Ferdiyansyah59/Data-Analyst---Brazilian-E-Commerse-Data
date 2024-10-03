@@ -2,15 +2,20 @@ import pandas as pd
 import streamlit as st
 from datetime import datetime
 from menu import question1, question2, question3, question4
+from pathlib import Path
 
 
+
+csv_file_path1 = Path(__file__).parents[0] / 'data/olist_customers_dataset.csv'
+csv_file_path2 = Path(__file__).parents[0] / 'data/olist_order_payments_dataset.csv'
+gambar = Path(__file__).parents[0] / 'foto.jpg'
 
 df_customer = pd.read_csv('./olist_customers_dataset.csv')
 df_payment = pd.read_csv('./olist_order_payments_dataset.csv')
 
 with st.sidebar:
     st.subheader('Ferdiyansyah')
-    # st.image("foto.jpg")
+    st.image(gambar)
     today = datetime.today().strftime('%d-%m-%Y')
     st.caption(f'Tanggal hari ini: {today}')
     menu = st.sidebar.selectbox(
