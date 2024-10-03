@@ -4,8 +4,19 @@ from datetime import datetime
 from menu import question1, question2, question3, question4
 
 
-df_customer = pd.read_csv('olist_customers_dataset.csv')
-df_payment = pd.read_csv('olist_order_payments_dataset.csv')
+
+
+
+file_path = "olist_customers_dataset.csv"
+file_path2 = 'olist_order_payments_dataset.csv'
+
+try:
+    df_customer = pd.read_csv(file_path)
+    df_payment = pd.read_csv(file_path2)
+    print("Data loaded successfully!")
+except FileNotFoundError as e:
+    print(f"Error loading data: {e}")
+
 
 with st.sidebar:
     st.subheader('Ferdiyansyah')
