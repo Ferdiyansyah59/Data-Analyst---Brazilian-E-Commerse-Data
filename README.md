@@ -6,6 +6,8 @@ conda activate dashboard_da
 pip install -r requirements.txt
 ```
 
+pip freeze > requirements.txt
+
 ## Setup Virtual Environtment - Local Prompt
 
 ```
