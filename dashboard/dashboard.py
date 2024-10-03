@@ -20,7 +20,7 @@ except FileNotFoundError as e:
 
 with st.sidebar:
     st.subheader('Ferdiyansyah')
-    st.image("foto.jpg")
+    # st.image("foto.jpg")
     today = datetime.today().strftime('%d-%m-%Y')
     st.caption(f'Tanggal hari ini: {today}')
     menu = st.sidebar.selectbox(
